@@ -25,5 +25,25 @@ let num = "33"
 
 let stringNum = String(num)
 
-console.log(stringNum)
-console.log(typeof stringNum)
+// console.log(stringNum)
+// console.log(typeof stringNum)
+
+
+// *********************Operations************************
+
+let value = 33
+val = -value
+
+// console.log(val)
+// console.log(2**3)
+// console.log(2 * 2)
+// console.log(2%3)
+// console.log(2/2)
+
+
+// console.log("2" + 2)  //22
+// console.log("2" + "2")  //22
+// console.log(2 + 2 + "2")  //42
+// console.log("2" + 2 + 2)  //222
+
+
