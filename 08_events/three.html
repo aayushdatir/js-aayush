@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Chai aur Code</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        
+        let stopInterval;
+        document.querySelector('#start').addEventListener('click', function(){
+            stopInterval = setInterval(function(str){
+            console.log(str + " Aayush")
+        }, 2000, 'Hi')
+        })
+
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearInterval(stopInterval)
+            console.log("Stopped")
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=400" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.unsplash.com/photo-1528164344705-47542687000d?w=400" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.unsplash.com/photo-1511497584788-876760111969?w=400" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // const id = document.getElementById('owl').onclick = function(){
+    //     alert("owl was click")
+    // }
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("Images was clicked")
+    }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("Owl was clicked")
+    //     e.stopPropagation()
+    // }, false)
+
+    document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault()
+        e.stopPropagation()
+        console.log("Google was clicked")
+    }, false)
+
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+
+        if(e.target.tagName === 'IMG'){
+            let removeNode = e.target.parentNode
+            removeNode.remove()
+            //console.log(removeNode)
+        }
+    }, false)
+</script>
+</html>
